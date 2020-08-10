@@ -1,0 +1,8 @@
+_site
+.sass-cache
+.jekyll-metadata
+ignore/
+node_modules/
+Gemfile.lock
+assets/css/style.css
+.idea/

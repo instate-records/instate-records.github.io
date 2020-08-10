@@ -1,0 +1,36 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no">
+
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <meta name="description"
+          content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <meta property="og:title" content="InState Records">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://instate-records.com/">
+    <meta property="og:description"
+          content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:image" content="https://instate-records.com/images/LogoInstate-Logo.png">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/icon-precomposed-256x256.png">
+    <link rel="apple-touch-icon" href="/assets/images/icon-precomposed-256x256.png"/>
+    <link rel="icon" href="/assets/images/icon-precomposed-32x32.png" sizes="32x32"/>
+    <link rel="icon" href="/assets/images/icon-precomposed-192x192.png" sizes="192x192"/>
+    <link rel="icon" href="/assets/images/icon-precomposed-256x256.png" sizes="256x256"/>
+    <link rel="apple-touch-icon-precomposed" href="/assets/images/icon-precomposed-129x129.png"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/fontawesome.min.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="/assets/css/regular.min.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="/assets/css/brands.min.css" type="text/css" media="all"/>
+
+    <link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all"/>
+
+    <script type="text/javascript" src="/assets/js/jquery-1.10.2.min.js"></script>
+
+</head>

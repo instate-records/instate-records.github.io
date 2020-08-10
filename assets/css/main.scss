@@ -1,0 +1,1989 @@
+---
+---
+
+//colors
+$white: #fff;
+$black: #000;
+$background: #272425;
+$color_boulder_approx: #777;
+$text-color: #a09f9c;
+$color_flint_approx: #6c6965;
+$color_cabbage_pont_approx: #414a3b;
+$color_alto_approx: #ddd;
+$color_nobel_approx: #b2b2b2;
+$white_90: rgba(255, 255, 255, .9);
+$color_mine_shaft_approx: #393939;
+$black_75: rgba(0, 0, 0, .75);
+$color_vivid_violet_approx: #892bb0;
+$color_cocoa_brown_95_approx: rgba(36, 32, 31, .95);
+$gallery_item_inner: #847c7a;
+
+//fonts
+$font_0: "Montserrat";
+$font_1: "sans-serif";
+
+//@extend-elements
+//original selectors
+//a, body, div, h3, h5, html, i, li, p, span, strong, ul
+%extend_1 {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  outline: 0;
+}
+
+//original selectors
+//.ajax_loader .double_pulse .double-bounce1, .ajax_loader .double_pulse .double-bounce2
+%extend_2 {
+  width: 100%;
+  height: 100%;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 50%;
+  background-color: $color_cabbage_pont_approx;
+  opacity: .6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+
+a {
+  @extend %extend_1;
+  color: $color_cabbage_pont_approx;
+  text-decoration: none;
+  cursor: pointer;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: color .15s ease-out;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  outline: 0;
+
+  img {
+    border: 0;
+  }
+
+  &:hover {
+    color: $white;
+  }
+
+  &#back_to_top {
+    color: $white;
+
+    &:link {
+      color: $white;
+    }
+
+    &:visited {
+      color: $white;
+    }
+
+    &:hover {
+      color: $black;
+    }
+
+    &:focus {
+      color: $black;
+    }
+  }
+}
+
+body {
+  @extend %extend_1;
+  line-height: 24px;
+  overflow-x: hidden !important;
+  font-family: $font_0, $font_1;
+  color: $color_nobel_approx;
+  background-color: $background;
+  font-size: 14px;
+  font-weight: 300;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  outline: 0;
+
+  div.pp_default .pp_loaderIcon {
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 20px;
+  }
+
+  &:not(.has_general_padding) .section_inner_margin {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+div {
+  @extend %extend_1;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  outline: 0;
+
+  &.section {
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+h3 {
+  font-family: $font_0, $font_1;
+  font-size: 35px;
+  color: $white;
+  line-height: 38px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  outline: 0;
+}
+
+h5 {
+  @extend %extend_1;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-family: $font_0, $font_1;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: $color_nobel_approx;
+}
+
+html {
+  @extend %extend_1;
+  height: 100%;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all 1.3s ease-out;
+  overflow-y: scroll !important;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  outline: 0;
+}
+
+i {
+  @extend %extend_1;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  outline: 0;
+}
+
+li {
+  @extend %extend_1;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  outline: 0;
+}
+
+p {
+  @extend %extend_1;
+  line-height: 24px;
+  font-weight: 300;
+  color: $text-color;
+  font-family: $font_0, $font_1;
+  font-size: 14px;
+  letter-spacing: 0;
+  font-style: normal;
+  text-transform: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  outline: 0;
+
+  &.has-drop-cap:not(:focus) {
+    &:first-letter {
+      float: left;
+      font-size: 8.4em;
+      line-height: .68;
+      font-weight: 100;
+      margin: .05em .1em 0 0;
+      text-transform: uppercase;
+      font-style: normal;
+    }
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+      padding-top: 14px;
+    }
+  }
+}
+
+span {
+  @extend %extend_1;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  outline: 0;
+}
+
+strong {
+  @extend %extend_1;
+}
+
+ul {
+  @extend %extend_1;
+  list-style-position: inside;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  outline: 0;
+
+  &.wpb_thumbnails-fluid > li {
+    margin-bottom: 0 !important;
+  }
+}
+
+article {
+  display: block;
+}
+
+footer {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 100;
+  position: relative;
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+
+  .footer_inner {
+    position: relative;
+  }
+
+  .container {
+    background-color: inherit;
+  }
+
+  .container_inner {
+    position: relative;
+
+    > .widget {
+      text-align: center;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+header {
+  display: block;
+  width: 100%;
+  margin: 0;
+  vertical-align: middle;
+  position: relative;
+  z-index: 110;
+
+  .header_inner_left {
+    position: absolute;
+    left: 45px;
+    top: 0;
+  }
+
+  .header_top_bottom_holder {
+    position: relative;
+  }
+
+  &.fixed {
+    width: 100%;
+    position: fixed;
+    z-index: 110;
+    top: 0;
+    left: 0;
+  }
+
+  .container_inner .header_inner_left {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &.dark .edgt_logo img {
+    &.normal {
+      opacity: 0;
+    }
+
+    &.light {
+      opacity: 0;
+    }
+
+    &.dark {
+      opacity: 1;
+    }
+  }
+
+  &:not(.sticky):not(.scrolled) .header_bottom .container_inner {
+    border-color: $black;
+    border-style: solid;
+    border-bottom-width: 0;
+  }
+}
+
+nav {
+  display: block;
+
+  &.popup_menu {
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    text-align: left;
+
+    ul {
+      position: relative;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+
+        a {
+          font-size: 40px;
+          font-weight: 800;
+          line-height: 47px;
+          letter-spacing: 1px;
+          color: $color_mine_shaft_approx;
+          padding: 0;
+          display: block;
+          position: relative;
+          text-decoration: none;
+          cursor: pointer;
+          text-transform: uppercase;
+          //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+          transition: color .15s ease-out;
+
+          &:hover {
+            color: $color_cabbage_pont_approx;
+          }
+
+          span {
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+
+    > ul {
+      display: block;
+
+      > li > a {
+        color: $white;
+        font-family: $font_0, $font_1;
+        font-size: 35px;
+        line-height: 58px;
+        font-style: normal;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        &:hover {
+          color: $text-color;
+        }
+
+        &.current {
+          color: $text-color;
+        }
+      }
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+::selection {
+  background: $color_cabbage_pont_approx;
+  color: $white;
+  background: $color_nobel_approx;
+}
+
+::-moz-selection {
+  background: $color_cabbage_pont_approx;
+  color: $white;
+  background: $color_nobel_approx;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 1000;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: left .33s cubic-bezier(.694, .0482, .335, 1);
+  left: 0;
+}
+
+.wrapper_inner {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sticky {
+  opacity: 1;
+}
+
+.clearfix {
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+
+  &:before {
+    content: " ";
+    display: table;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 100;
+  margin-top: 0;
+
+  &.content_top_margin {
+    margin-top: 105px !important;
+  }
+
+  .title .container_inner {
+    padding: 0 !important;
+  }
+
+  .content_inner > .full_width > .full_width_inner {
+    padding-top: 0;
+  }
+}
+
+.container {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.container_inner {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.full_width {
+  position: relative;
+  z-index: 100;
+}
+
+.content_bottom {
+  position: relative;
+  z-index: 100;
+}
+
+.ajax_loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1100;
+  display: none;
+
+  .double_pulse {
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    position: relative;
+
+    .double-bounce1 {
+      @extend %extend_2;
+    }
+
+    .double-bounce2 {
+      @extend %extend_2;
+      animation-delay: -1s;
+    }
+  }
+}
+
+.ajax_loader_1 {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+  }
+  100% {
+  }
+  50% {
+  }
+}
+
+@keyframes bounce {
+  0% {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: scale(0);
+  }
+  100% {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: scale(0);
+  }
+  50% {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: scale(1);
+  }
+}
+
+#back_to_top {
+  width: 46px;
+  height: auto;
+  position: fixed;
+  bottom: 45px;
+  margin: 0;
+  z-index: 10000;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: opacity .15s ease-out;
+  opacity: 0;
+  visibility: hidden;
+
+  &.left {
+    left: 25px;
+  }
+
+  &.right {
+    right: 25px;
+  }
+
+  &.center {
+    left: 0;
+    right: 0 !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.off {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    right: 25px;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: visibility .15s ease-out, opacity .15s ease-out;
+  }
+
+  &.on {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    visibility: visible;
+    right: 25px;
+  }
+
+  .hover {
+    display: none;
+  }
+
+  > span {
+    width: 46px;
+    height: 46px;
+    line-height: 44px;
+    text-decoration: none;
+    text-align: center;
+    background-color: $color_alto_approx;
+    border: 1px solid transparent;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: background-color .15s ease-out, color .15s ease-out, border-color .15s ease-out;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+
+  &.triangle_back_to_top {
+    position: absolute;
+    left: 50%;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent !important;
+    border-right: 50px solid transparent !important;
+    top: -16px;
+    border-bottom: 16px solid $color_cabbage_pont_approx;
+    border-top: 0;
+    bottom: auto;
+    visibility: visible;
+    opacity: 1;
+
+    .triangle_btn_text {
+      border: 0;
+      width: auto;
+      height: auto;
+
+      &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 16px;
+        left: 0;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: translate(-50%, 0);
+        font-size: 13px;
+        color: $color_nobel_approx;
+        font-style: italic;
+        line-height: 13px;
+      }
+    }
+  }
+
+  span span {
+    display: block;
+    line-height: inherit;
+  }
+}
+
+.wpb_row {
+  margin-bottom: 0 !important;
+}
+
+.wpb_content_element {
+  margin-bottom: 0 !important;
+}
+
+.last_toggle_el_margin {
+  margin-bottom: 0 !important;
+}
+
+.wpb_button {
+  margin-bottom: 0 !important;
+}
+
+.header_inner_right {
+  float: right;
+  position: relative;
+  z-index: 110;
+}
+
+.header_bottom {
+  position: relative;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all .2s ease-out 0s;
+
+  .container_inner {
+    position: relative;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+  }
+}
+
+.logo_wrapper {
+  height: 105px;
+  float: left;
+}
+
+.edgt_logo {
+  position: relative;
+  top: 50%;
+  left: 0;
+
+  a {
+    position: relative;
+    display: block;
+    visibility: hidden;
+  }
+
+  img {
+    display: block;
+    opacity: 1;
+    position: absolute;
+    top: -50%;
+    width: auto !important;
+    max-width: none;
+
+    &.dark {
+      opacity: 0;
+    }
+
+    &.light {
+      opacity: 0;
+    }
+
+    &.mobile {
+      opacity: 0;
+    }
+
+    &.popup {
+      opacity: 0;
+    }
+
+    &.sticky {
+      opacity: 0;
+    }
+  }
+}
+
+@media only screen and(min-width: 1000px) {
+  header {
+    &.fixed {
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: left .13s cubic-bezier(.694, .0482, .335, 1), left .33s cubic-bezier(.694, .0482, .335, 1);
+    }
+
+    &:not(.centered_logo) .edgt_logo img {
+      height: 100%;
+    }
+  }
+  .dark {
+    &.header_style_on_scroll {
+      .popup_menu:not(.opened) .line {
+        background-color: $white;
+
+        &:after {
+          background-color: $white;
+        }
+
+        &:before {
+          background-color: $white;
+        }
+      }
+
+      .side_menu_button > a {
+        color: $black;
+      }
+    }
+
+    &:not(.sticky):not(.scrolled) {
+      .popup_menu:not(.opened) .line {
+        background-color: $white;
+
+        &:after {
+          background-color: $white;
+        }
+
+        &:before {
+          background-color: $white;
+        }
+      }
+
+      .side_menu_button > a {
+        color: $black;
+      }
+    }
+  }
+  .fixed_minimal .edgt_logo a img {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translate(-50%, 0);
+  }
+}
+
+.fixed_minimal {
+  .container_inner {
+    .header_inner_left {
+      position: relative;
+      left: auto;
+      top: auto;
+      float: left;
+    }
+
+    .logo_wrapper {
+      float: none;
+      position: absolute;
+      left: 50%;
+      top: 0;
+    }
+  }
+
+  .header_inner_left {
+    position: relative;
+    left: auto;
+    top: auto;
+    float: left;
+  }
+
+  .logo_wrapper {
+    float: none;
+    position: absolute;
+    left: 50%;
+    top: 0;
+  }
+
+  .side_menu_button > a {
+    margin: 0;
+  }
+}
+
+.side_menu_button_wrapper {
+  display: table;
+}
+
+.side_menu_button {
+  cursor: pointer;
+  display: table-cell;
+  vertical-align: middle;
+  height: 105px;
+  position: relative;
+
+  > a {
+    font-size: 14px;
+    position: relative;
+    display: inline;
+    margin: 0 0 0 12px;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: opacity .15s ease-out, color .15s ease-out;
+    color: $black;
+
+    &:hover {
+      color: $color_nobel_approx !important;
+    }
+  }
+
+  .popup_menu {
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: background-color .15s ease-out;
+  }
+
+  a i {
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: color .15s ease-out;
+  }
+}
+
+:-moz-placeholder {
+  color: $color_flint_approx;
+  margin: 10px 0 0;
+}
+
+:-ms-input-placeholder {
+  color: $color_flint_approx;
+  margin: 10px 0 0;
+}
+
+::-moz-placeholder {
+  color: $color_flint_approx;
+  margin: 10px 0 0;
+}
+
+::-webkit-input-placeholder {
+  color: $color_flint_approx;
+  margin: 10px 0 0;
+}
+
+.popup_menu_inner {
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  top: -1px;
+  vertical-align: middle;
+  width: 13px;
+}
+
+.popup_menu {
+  &.medium {
+    .popup_menu_inner {
+      top: -2px;
+      height: 3px;
+      width: 19px;
+    }
+
+    .line {
+      height: 3px;
+      width: 19px;
+
+      &:after {
+        height: 3px;
+        width: 19px;
+        top: 6px;
+      }
+
+      &:before {
+        height: 3px;
+        width: 19px;
+        top: -6px;
+      }
+    }
+  }
+
+  .line {
+    background-color: $white;
+    height: 2px;
+    margin: 0;
+    width: 13px;
+    top: 0;
+    left: 0;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all .15s ease-out;
+    position: absolute;
+    display: inline-block;
+
+    &:after {
+      background-color: $white;
+      content: "";
+      display: block;
+      height: 2px;
+      position: absolute;
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all .15s ease-out;
+      width: 13px;
+      z-index: 1;
+      top: 4px;
+    }
+
+    &:before {
+      background-color: $white;
+      content: "";
+      display: block;
+      height: 2px;
+      position: absolute;
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all .15s ease-out;
+      width: 13px;
+      z-index: 1;
+      top: -4px;
+    }
+  }
+
+  &.opened {
+    .line {
+      background-color: transparent !important;
+
+      &:after {
+        background-color: $white;
+        top: 0 !important;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(45deg);
+      }
+
+      &:before {
+        background-color: $white;
+        top: 0 !important;
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(-45deg);
+      }
+    }
+
+    &:hover .line {
+      &:after {
+        background-color: $color_cabbage_pont_approx;
+      }
+
+      &:before {
+        background-color: $color_cabbage_pont_approx;
+      }
+    }
+  }
+
+  &:hover .line {
+    background-color: $color_cabbage_pont_approx;
+    color: $color_nobel_approx !important;
+
+    &:after {
+      background-color: $color_cabbage_pont_approx;
+      color: $color_nobel_approx !important;
+    }
+
+    &:before {
+      background-color: $color_cabbage_pont_approx;
+      color: $color_nobel_approx !important;
+    }
+  }
+}
+
+.popup_menu_opened {
+  #back_to_top {
+    visibility: hidden !important;
+  }
+
+  .popup_menu_holder_outer {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .header_bottom {
+    background-color: transparent !important;
+    border-color: transparent !important;
+  }
+
+  .header_top_bottom_holder {
+    background-color: transparent !important;
+    border-color: transparent !important;
+  }
+
+  .container .container_inner {
+    background-color: transparent !important;
+    border-color: transparent !important;
+  }
+
+  .edgt_logo img {
+    &.dark {
+      opacity: 0 !important;
+    }
+
+    &.light {
+      opacity: 0 !important;
+    }
+
+    &.mobile {
+      opacity: 0 !important;
+    }
+
+    &.normal {
+      opacity: 0 !important;
+    }
+
+    &.sticky {
+      opacity: 0 !important;
+    }
+  }
+
+  header .edgt_logo img.popup {
+    opacity: 1 !important;
+  }
+
+  &.fade_in .popup_menu_holder_outer {
+    //Instead of the line below you could use @include backface-visibility($visibility)
+    backface-visibility: hidden;
+    animation: fade_in .25s linear both;
+  }
+
+  &.fade_push_text_top .popup_menu_holder_outer nav > ul > li > a {
+    //Instead of the line below you could use @include backface-visibility($visibility)
+    backface-visibility: hidden;
+    animation: push_text_top .4s ease-out both .5s;
+  }
+}
+
+.popup_menu_holder_outer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden !important;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 105;
+}
+
+.popup_menu_holder {
+  width: 100%;
+  height: 100%;
+  display: table;
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-color: $color_cocoa_brown_95_approx;
+}
+
+.popup_menu_holder_inner {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 100px 0;
+}
+
+@-webkit-keyframes fade_in {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@-webkit-keyframes push_text_top {
+  0% {
+    opacity: 0;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateY(0);
+  }
+}
+
+@keyframes push_text_top {
+  0% {
+    opacity: 0;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateY(0);
+  }
+}
+
+.title {
+  display: block;
+  width: 100%;
+  height: 200px;
+  text-align: left;
+  position: relative;
+  z-index: 101;
+
+  &.with_background_color {
+    background-image: none;
+  }
+
+  .not_responsive {
+    display: none;
+  }
+
+  .title_holder {
+    height: 100%;
+    left: 0;
+    position: relative;
+    width: 100%;
+
+    .container {
+      display: table;
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      .container_inner {
+        display: table-cell;
+        vertical-align: middle;
+        border-top-width: 1px;
+        border-top-color: $color_nobel_approx;
+        border-top-style: dotted;
+      }
+    }
+  }
+}
+
+.title_subtitle_holder {
+  display: block;
+  padding: 0;
+  position: relative;
+  z-index: 25;
+}
+
+.edgt_icon_stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+
+.edgt_icon_shade {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 25;
+
+  > a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: inherit !important;
+    text-decoration: none !important;
+  }
+}
+
+.separator {
+  position: relative;
+  display: block;
+  border-bottom: 1px solid $color_nobel_approx;
+  margin: 10px 0;
+
+  &.transparent {
+    border-color: transparent !important;
+    clear: both;
+  }
+
+  &.normal {
+    border-bottom-width: 1px;
+    border-color: $color_nobel_approx;
+    border-style: dotted;
+  }
+}
+
+.footer_top_holder {
+  display: block;
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+
+  .footer_top:not(footer_top_full) .container_inner {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.footer_top {
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .textwidget {
+    word-wrap: break-word;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: none;
+  }
+
+  a {
+    word-wrap: break-word;
+    color: $color_nobel_approx;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &:not(.footer_top_full) .container_inner {
+    padding: 82px 0 76px;
+  }
+}
+
+.footer_bottom_holder {
+  display: table;
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;
+  height: 145px;
+
+  .column_inner {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  p {
+    margin: 0;
+    color: $color_mine_shaft_approx;
+  }
+}
+
+.footer_bottom_holder_inner {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: $font_0, $font_1;
+  font-size: 14px;
+  letter-spacing: 0;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: none;
+  color: $color_nobel_approx;
+
+  p {
+    font-family: $font_0, $font_1;
+    font-size: 14px;
+    letter-spacing: 0;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: none;
+    color: $color_nobel_approx;
+  }
+}
+
+.masonry_gallery_holder {
+  margin: 0 -10px;
+
+  .masonry_gallery_item {
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    padding: 10px;
+    opacity: 0;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: opacity .3s ease .6s;
+
+    .masonry_gallery_image_holder {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    &:nth-child(2) {
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: opacity .3s ease .1s;
+    }
+
+    &:nth-child(3) {
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: opacity .3s ease .15s;
+    }
+  }
+
+  &.loaded .masonry_gallery_item {
+    opacity: 1;
+  }
+}
+
+.masonry_gallery_item {
+  &.square_big {
+    width: 50%;
+
+    h3 {
+      color: $white;
+      font-size: 35px;
+      line-height: 48px;
+      text-transform: uppercase;
+      font-family: $font_0;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 2px;
+      padding-bottom: 13px;
+    }
+
+    .masonry_gallery_item_inner {
+      background-color: $gallery_item_inner;
+
+      .masonry_gallery_item_content {
+        text-align: left;
+        padding-left: 12%;
+        padding-right: 12%;
+      }
+    }
+  }
+
+  &.square_small {
+    width: 25%;
+
+    h3 {
+      color: $white;
+      font-size: 20px;
+      line-height: 32px;
+      text-transform: uppercase;
+      font-family: $font_0;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 1px;
+      padding-bottom: 8px;
+    }
+
+    .masonry_gallery_item_inner {
+      background-color: $gallery_item_inner;
+    }
+  }
+
+  img {
+    vertical-align: middle;
+    max-height: 100%;
+  }
+
+  .masonry_gallery_item_outer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  .masonry_gallery_item_inner {
+    position: relative;
+    height: 100%;
+  }
+
+  &.standard {
+    .masonry_gallery_item_inner {
+      opacity: 0;
+      background-color: $black_75;
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: opacity .3s ease-in-out;
+    }
+
+    &:hover .masonry_gallery_item_inner {
+      opacity: 1;
+      background-color: $gallery_item_inner;
+    }
+  }
+
+  .masonry_gallery_triangle_holder {
+    position: relative;
+  }
+
+  .masonry_gallery_triangle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateX(-50%);
+    border-top: 0 solid $color_vivid_violet_approx;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    z-index: 30;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: border-top-width .3s ease-in-out;
+  }
+
+  &:hover .masonry_gallery_triangle {
+    border-top-width: 15px;
+  }
+}
+
+.grid-sizer {
+  width: 25%;
+}
+
+@media only screen and(max-width: 1000px) {
+  .content {
+    margin-bottom: 0 !important;
+
+    .content_inner > .full_width > .full_width_inner {
+      padding-top: 0 !important;
+    }
+  }
+  .logo_wrapper {
+    height: 80px !important;
+    display: table;
+    left: 50%;
+    position: absolute;
+
+    a {
+      height: 80px !important;
+    }
+  }
+  .side_menu_button {
+    height: 80px !important;
+  }
+  .edgt_logo {
+    display: table-cell;
+    position: relative;
+    top: auto;
+    vertical-align: middle;
+
+    a {
+      height: 80px !important;
+      left: -50%;
+      width: auto !important;
+    }
+
+    img {
+      top: 0;
+      left: 0;
+    }
+  }
+  .container_inner {
+    width: 768px;
+  }
+  .header_inner_left {
+    position: relative !important;
+    left: 0 !important;
+    margin-bottom: 0;
+  }
+  header {
+    position: relative !important;
+    left: 0 !important;
+    margin-bottom: 0;
+    top: 0 !important;
+    margin-top: 0 !important;
+    display: block;
+
+    .edgt_logo img {
+      &.mobile {
+        display: block !important;
+        opacity: 1 !important;
+        position: relative;
+        margin: 0 auto;
+      }
+
+      &.dark {
+        display: none !important;
+      }
+
+      &.light {
+        display: none !important;
+      }
+
+      &.normal {
+        display: none !important;
+      }
+
+      &.sticky {
+        display: none !important;
+      }
+    }
+  }
+  .title {
+    height: auto !important;
+
+    .not_responsive {
+      display: block;
+    }
+
+    .title_holder {
+      padding: 0 !important;
+      height: 100% !important;
+    }
+
+    &:not(.breadcrumbs_title) .title_holder {
+      height: 100% !important;
+      //Instead of the line below you could use @include box-sizing($bs)
+      box-sizing: border-box;
+
+      .container .container_inner {
+        padding: 10px 0 !important;
+      }
+    }
+  }
+  .grid-sizer {
+    width: 50%;
+  }
+  .masonry_gallery_item {
+    &.square_big {
+      width: 100%;
+    }
+
+    &.square_small {
+      width: 50%;
+    }
+  }
+  div.grid_section .section_inner {
+    width: 768px;
+  }
+  .dark .side_menu_button > a {
+    color: $color_boulder_approx;
+  }
+  body .content {
+    margin-top: 0 !important;
+
+    &.content_top_margin {
+      margin-top: 0 !important;
+    }
+  }
+}
+
+@media only screen and(max-width: 480px) {
+  .container_inner {
+    width: 300px;
+  }
+  .header_bottom {
+    padding: 0 25px;
+  }
+  .edgt_logo a {
+    height: 80px !important;
+  }
+  div.grid_section .section_inner {
+    width: 300px;
+  }
+  footer .container_inner {
+    padding: 0 25px;
+    width: auto;
+  }
+  .side_menu_button > a {
+    padding: 0 0 0 5px;
+  }
+  .masonry_gallery_item.square_big h3 {
+    font-size: 24.5px;
+  }
+}
+
+@media only screen and(min-width: 600px) {
+  .footer_top {
+    text-align: center;
+  }
+}
+
+.title_content_background {
+  background-color: $white;
+}
+
+@media only screen and(max-width: 1200px) {
+  .container_inner {
+    width: 950px;
+  }
+  div.grid_section .section_inner {
+    width: 950px;
+  }
+}
+
+@media only screen and(max-width: 768px) {
+  .container_inner {
+    width: 600px;
+  }
+  div.grid_section .section_inner {
+    width: 600px;
+  }
+  nav.popup_menu ul li a {
+    line-height: 40px;
+
+    span {
+      font-size: .7em;
+    }
+  }
+}
+
+@media only screen and(max-width: 600px) {
+  .container_inner {
+    width: 420px;
+  }
+  .grid-sizer {
+    width: 100%;
+  }
+  div.grid_section .section_inner {
+    width: 420px;
+  }
+  .masonry_gallery_item.square_small {
+    width: 100%;
+  }
+}
+
+@media only screen and(max-width: 420px) {
+  .header_bottom {
+    padding: 0 15px;
+  }
+  footer .container_inner {
+    padding: 0 15px;
+  }
+}
+
+@media only screen and(max-width: 350px) {
+  .section_inner_margin {
+    margin: 0;
+  }
+}
+
+@media only screen and(max-width: 300px) {
+  .container_inner {
+    width: 95%;
+  }
+  div.grid_section .section_inner {
+    width: 95%;
+  }
+}
+
+.full_width_inner {
+  position: static;
+}
+
+#fancybox-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  margin-left: -20px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1104;
+  display: none;
+
+  div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 480px;
+  }
+}
+
+#fancybox-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1100;
+  display: none;
+}
+
+#fancybox-tmp {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  overflow: auto;
+  display: none;
+}
+
+#fancybox-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  z-index: 1101;
+  outline: 0;
+  display: none;
+}
+
+#fancybox-outer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: $white;
+}
+
+#fancybox-content {
+  width: 0;
+  height: 0;
+  padding: 0;
+  outline: 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 1102;
+  border: 0 solid $white;
+}
+
+#fancybox-close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  background: transparent -40px 0;
+  cursor: pointer;
+  z-index: 1103;
+  display: none;
+}
+
+#fancybox-left {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 35%;
+  cursor: pointer;
+  outline: 0;
+  background: transparent;
+  z-index: 1102;
+  display: none;
+  left: 0;
+
+  &:hover {
+    visibility: visible;
+
+    span {
+      left: 20px;
+    }
+  }
+}
+
+#fancybox-right {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 35%;
+  cursor: pointer;
+  outline: 0;
+  background: transparent;
+  z-index: 1102;
+  display: none;
+  right: 0;
+
+  &:hover {
+    visibility: visible;
+
+    span {
+      left: auto;
+      right: 20px;
+    }
+  }
+}
+
+#fancybox-left-ico {
+  position: absolute;
+  top: 50%;
+  left: -9999px;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  cursor: pointer;
+  z-index: 1102;
+  display: block;
+  background-position: -40px -30px;
+}
+
+#fancybox-right-ico {
+  position: absolute;
+  top: 50%;
+  left: -9999px;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  cursor: pointer;
+  z-index: 1102;
+  display: block;
+  background-position: -40px -60px;
+}
+
+.fancybox-bg {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: 20px;
+  height: 20px;
+  z-index: 1001;
+}
+
+#fancybox-bg-n {
+  top: -20px;
+  left: 0;
+  width: 100%;
+}
+
+#fancybox-bg-ne {
+  top: -20px;
+  right: -20px;
+  background-position: -40px -162px;
+}
+
+#fancybox-bg-e {
+  top: 0;
+  right: -20px;
+  height: 100%;
+  background-position: -20px 0;
+}
+
+#fancybox-bg-se {
+  bottom: -20px;
+  right: -20px;
+  background-position: -40px -182px;
+}
+
+#fancybox-bg-s {
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  background-position: 0 -20px;
+}
+
+#fancybox-bg-sw {
+  bottom: -20px;
+  left: -20px;
+  background-position: -40px -142px;
+}
+
+#fancybox-bg-w {
+  top: 0;
+  left: -20px;
+  height: 100%;
+}
+
+#fancybox-bg-nw {
+  top: -20px;
+  left: -20px;
+  background-position: -40px -122px;
+}
+
+#fancybox-title {
+  font-size: 12px;
+  z-index: 1102;
+}
+
+.social_icon {
+  margin: 0 14px 0 0;
+
+  a {
+    color: $color_nobel_approx;
+
+    &:link {
+      color: $color_nobel_approx;
+    }
+
+    &:visited {
+      color: $color_nobel_approx;
+    }
+
+    &:hover, &focus {
+      color: $white;
+    }
+  }
+}
+
+.grid_section .section_inner {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 20;
+}
+
+.right_side_menu_opened #back_to_top {
+  display: none;
+}
+
+.no-touch .edgt_logo img {
+}
+
+.fade_push_text_top .popup_menu_holder_outer {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  overflow: hidden !important;
+  //Instead of the line below you could use @include backface-visibility($visibility)
+  backface-visibility: hidden;
+  position: fixed;
+  z-index: 105;
+  opacity: 0;
+}
+
+.edgt_icon_shortcode i {
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: transform .2s ease, color .15s ease-out;
+  font-style: normal !important;
+  letter-spacing: initial !important;
+  display: inline-block;
+}
+
+.masonry_gallery_item_inner .masonry_gallery_item_content {
+  position: absolute;
+  top: 50%;
+  //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: translateY(-50%);
+  width: 100%;
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+  padding: 0 10%;
+}
+
+.masonry_gallery_item_content h3 {
+  color: $white;
+  text-transform: uppercase;
+  padding: 0 0 20px 0;
+}
+
+.dark:not(.sticky):not(.scrolled) .side_menu_button > a:hover {
+  color: $color_nobel_approx !important;
+}
