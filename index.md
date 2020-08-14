@@ -11,7 +11,7 @@ layout: default
                         <div class="masonry_gallery_holder ">
                             <div class="grid-sizer"></div>
                             <article class="masonry_gallery_item square_big standard"><a
-                                    href="https://soundcloud.com/InStateRecords" target="_blank">
+                                    href="https://ditto.fm/till-we-meet-at-the-candy-pops-again" target="_blank">
                                 <div class="masonry_gallery_image_holder"><img width="1000"
                                                                                height="1000"
                                                                                src="/releases/rflktd-till-we-meet-at-the-candypops-again/cover-1000px.png"
