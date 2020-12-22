@@ -11,14 +11,33 @@ layout: default
                         <div class="masonry_gallery_holder ">
                             <div class="grid-sizer"></div>
                             <article class="masonry_gallery_item square_big standard"><a
-                                    href="https://ditto.fm/till-we-meet-at-the-candy-pops-again" target="_blank">
+                                    href="https://soundcloud.com/rflktd/at-the-pace-of-your-heart" target="_blank">
                                 <div class="masonry_gallery_image_holder"><img width="1000"
                                                                                height="1000"
-                                                                               src="/releases/rflktd-till-we-meet-at-the-candypops-again/cover-1000px.png"
+                                                                               src="/releases/rflktd-at-the-pace-of-your-heart/cover-1000px.png"
                                                                                class="attachment-portfolio_masonry_large size-portfolio_masonry_large wp-post-image"
                                                                                alt=""
-                                                                               srcset="/releases/rflktd-till-we-meet-at-the-candypops-again/cover-1000px.png 1000w,/releases/rflktd-till-we-meet-at-the-candypops-again/cover-1200px.png 1200w,/releases/rflktd-till-we-meet-at-the-candypops-again/cover-786px.png 786w,/releases/rflktd-till-we-meet-at-the-candypops-again/cover-300px.png 300w"
+                                                                               srcset="/releases/rflktd-at-the-pace-of-your-heart/cover-1000px.png 1000w,/releases/rflktd-at-the-pace-of-your-heart/cover-1200px.png 1200w,/releases/rflktd-at-the-pace-of-your-heart/cover-600px.png 600w,/releases/rflktd-at-the-pace-of-your-heart/cover-300px.png 300w"
                                                                                sizes="(max-width: 1000px) 100vw, 1000px"/>
+                                </div>
+                                <div class="masonry_gallery_item_outer">
+                                    <div class="masonry_gallery_triangle_holder">
+                                        <div class="masonry_gallery_triangle"></div>
+                                    </div>
+                                    <div class="masonry_gallery_item_inner">
+                                        <div class="masonry_gallery_item_content"><h3>RFLKTD &#8211; At The Pace Of Your Heart</h3></div>
+                                    </div>
+                                </div>
+                            </a></article>
+                            <article class="masonry_gallery_item square_big standard"><a
+                                    href="https://ditto.fm/till-we-meet-at-the-candy-pops-again" target="_blank">
+                                <div class="masonry_gallery_image_holder"><img width="786"
+                                                                               height="786"
+                                                                               src="/releases/rflktd-till-we-meet-at-the-candypops-again/cover-786px.png"
+                                                                               class="attachment-portfolio_masonry_large size-portfolio_masonry_large wp-post-image"
+                                                                               alt=""
+                                                                               srcset="/releases/rflktd-till-we-meet-at-the-candypops-again/cover-1200px.png 1200w,/releases/rflktd-till-we-meet-at-the-candypops-again/cover-786px.png 786w,/releases/rflktd-till-we-meet-at-the-candypops-again/cover-300px.png 300w"
+                                                                               sizes="(max-width: 1000px) 100vw, 786px"/>
                                 </div>
                                 <div class="masonry_gallery_item_outer">
                                     <div class="masonry_gallery_triangle_holder">
